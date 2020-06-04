@@ -1,0 +1,110 @@
+.top_bar_user {
+    background-color: #fff;
+    padding: 10px 30px;
+    box-shadow: 0 3px 6px rgba($color: $blue, $alpha: .1);
+    display: flex;
+    justify-content: space-between;
+
+    .btn {
+        background-color: $blue;
+        color: #fff;
+        text-decoration: none;
+        display: inline-block;
+        line-height: 36px;
+        border-radius: 4px;
+        padding: 0 20px;
+        margin-right: 10px;
+        transition: all 0.3s ease;
+
+        &:hover {
+            background-color: #00AAFF;
+        }
+    }
+    .btn_grey {
+        background-color: $grey;
+
+        &:hover {
+            background-color: #B2B6B9;
+        }
+    }
+    .actions_user {
+        display: flex;
+        align-items: center;        
+        
+        .user {
+            border-left: 1px solid #eee;
+            margin-left: 20px;
+            padding-left: 20px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            cursor: pointer;
+
+            .user_menu {
+                display: none;
+                position: absolute;
+                top: 44px;
+                right: 0;
+                z-index: 10;
+                background-color: #fff;
+                box-shadow: 0 3px 6px rgba($color: $darkblue, $alpha: .1);
+                border-radius: 6px;    
+                border: 1px solid #eee;
+                width: 160px;            
+                padding: 10px 20px;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: -6px;
+                    right: 20px;
+                    width: 0; 
+                    height: 0; 
+                    border-left: 6px solid transparent;
+                    border-right: 6px solid transparent;  
+                    border-bottom: 6px solid #666;
+                }
+                &::after {
+                    content: '';
+                    position: absolute;
+                    top: -6px;
+                    right: 20px;
+                    width: 0; 
+                    height: 0; 
+                    border-left: 6px solid transparent;
+                    border-right: 6px solid transparent;  
+                    border-bottom: 6px solid #fff;
+                }
+
+                ul {
+                    margin: 0;
+                    padding: 0;
+                    list-style: none;
+
+                    li {
+                        line-height: 28px;
+                        text-align: right;
+                    }
+                    li:last-child {
+                        border-top: 1px solid #eee;
+                        margin-top: 5px;
+                        padding-top: 5px;
+                    }
+
+                    a {
+                        display: block;                        
+                    }
+                }
+            }
+        }
+
+        .picture {
+            width: 32px;
+            height: 32px;
+            border: 2px solid $blue;
+            border-radius: 25px;
+            overflow: hidden; 
+            margin-right: 10px;
+        }
+    }
+}
