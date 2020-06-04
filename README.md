@@ -1,2 +1,2 @@
-# Dashboard WordPress Concept.
+# Dashboard WordPress Concept
 HTML, CSS, Jquery files.
